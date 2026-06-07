@@ -775,3 +775,54 @@ select {
     margin: 8px 0 0;
   }
 }
+
+/* v5 requested refinements */
+.step-card-external h3::after {
+  background: #e8edf1;
+  border-radius: 999px;
+  color: #52616d;
+  content: "他サイトで支援";
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 900;
+  margin-left: 10px;
+  padding: 4px 10px;
+  vertical-align: middle;
+}
+.note-link {
+  align-items: center;
+  display: inline-flex;
+  gap: 10px;
+}
+.note-logo {
+  align-items: center;
+  background: #41c9b4;
+  border-radius: 10px;
+  color: #fff;
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  padding: 8px 10px;
+}
+@media (max-width: 720px) {
+  .step-card-external h3::after {
+    margin: 8px 0 0;
+  }
+}
+
+/* v6 line qr image */
+.line-qr-image {
+  border-radius: 18px;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+.line-qr-card .qr-placeholder {
+  background: #fff;
+  border: 0;
+  max-width: 320px;
+  padding: 0;
+}
