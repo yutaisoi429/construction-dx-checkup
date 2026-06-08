@@ -884,8 +884,25 @@ select {
   }
 }
 
-/* v9 consultation copy refinements */
-.consultation-details .text-link-light {
+/* v10 note logo and LINE copy cleanup */
+.note-logo-link {
+  align-items: center;
+  background: #41c9b4;
+  border-radius: 10px;
+  color: #fff;
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
   margin-left: 8px;
-  margin-top: 0;
+  padding: 8px 10px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.note-logo-link:hover {
+  transform: translateY(-1px);
+}
+.line-option .option-copy h3 {
+  margin-bottom: 0;
 }
