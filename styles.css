@@ -675,68 +675,6 @@ select {
   padding: 4px 10px;
   vertical-align: middle;
 }
-.operation-support {
-  align-items: center;
-  background: linear-gradient(135deg, #fffdf8, #eef7f3);
-  display: grid;
-  gap: clamp(24px, 4vw, 52px);
-  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
-}
-.support-copy p {
-  max-width: 760px;
-}
-.support-list {
-  display: grid;
-  gap: 12px;
-  list-style: none;
-  margin: 24px 0;
-  padding: 0;
-}
-.support-list li {
-  align-items: center;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  display: flex;
-  font-weight: 900;
-  gap: 10px;
-  padding: 14px 16px;
-}
-.support-list li::before {
-  background: var(--primary);
-  border-radius: 999px;
-  color: #fff;
-  content: "✓";
-  display: grid;
-  flex: 0 0 24px;
-  font-size: 14px;
-  height: 24px;
-  place-items: center;
-  width: 24px;
-}
-.support-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-.support-links a {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--primary-dark);
-  font-weight: 900;
-  padding: 10px 16px;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.line-qr-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  box-shadow: var(--shadow);
-  padding: clamp(22px, 4vw, 34px);
-  text-align: center;
-}
 .qr-placeholder {
   align-items: center;
   aspect-ratio: 1;
@@ -765,11 +703,6 @@ select {
   font-size: 13px;
   margin-top: 8px;
 }
-@media (max-width: 1080px) {
-  .operation-support {
-    grid-template-columns: 1fr;
-  }
-}
 @media (max-width: 720px) {
   .step-card-active h3::after {
     margin: 8px 0 0;
@@ -789,23 +722,6 @@ select {
   padding: 4px 10px;
   vertical-align: middle;
 }
-.note-link {
-  align-items: center;
-  display: inline-flex;
-  gap: 10px;
-}
-.note-logo {
-  align-items: center;
-  background: #41c9b4;
-  border-radius: 10px;
-  color: #fff;
-  display: inline-flex;
-  font-size: 15px;
-  font-weight: 900;
-  letter-spacing: -0.03em;
-  line-height: 1;
-  padding: 8px 10px;
-}
 @media (max-width: 720px) {
   .step-card-external h3::after {
     margin: 8px 0 0;
@@ -820,9 +736,109 @@ select {
   max-width: 100%;
   width: 100%;
 }
-.line-qr-card .qr-placeholder {
+
+/* v7 merged consultation paths */
+.consultation-merged {
+  background: linear-gradient(135deg, #0f7b63 0%, #143f4e 100%);
+  padding-bottom: clamp(48px, 7vw, 78px);
+}
+.consultation-merged h2 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px;
+}
+.consultation-options {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 34px auto 0;
+  max-width: 1060px;
+  text-align: left;
+}
+.consultation-option {
+  background: rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 28px;
+  min-height: 330px;
+  padding: clamp(22px, 3vw, 32px);
+}
+.consultation-option h3 {
+  color: #fff;
+  font-size: clamp(25px, 2.4vw, 34px);
+  letter-spacing: -0.04em;
+  margin: 22px 0 14px;
+}
+.consultation-option p {
+  color: #e9f7f4;
+  font-weight: 700;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
+}
+.option-label {
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 242, 184, 0.62);
+  border-radius: 999px;
+  color: #fff2b8;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 900;
+  padding: 6px 14px;
+}
+.option-label.wide {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.option-content {
+  align-items: center;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 180px);
+}
+.consultation-merged .qr-placeholder {
   background: #fff;
   border: 0;
-  max-width: 320px;
-  padding: 0;
+  border-radius: 22px;
+  margin: 22px 0 0;
+  max-width: 180px;
+  padding: 14px;
+}
+.consultation-merged .line-qr-image {
+  border-radius: 0;
+}
+.text-link-light {
+  color: #fff2b8;
+  display: inline-flex;
+  font-weight: 900;
+  margin-top: 10px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.consultation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+.consultation-actions .primary {
+  background: #123025;
+  box-shadow: none;
+}
+@media (max-width: 1080px) {
+  .consultation-options,
+  .option-content {
+    grid-template-columns: 1fr;
+  }
+  .consultation-merged .qr-placeholder {
+    max-width: 220px;
+  }
+}
+@media (max-width: 720px) {
+  .consultation-option {
+    min-height: 0;
+  }
+  .consultation-actions .button {
+    width: 100%;
+  }
 }
