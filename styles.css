@@ -883,3 +883,9 @@ select {
     grid-template-columns: 1fr;
   }
 }
+
+/* v9 consultation copy refinements */
+.consultation-details .text-link-light {
+  margin-left: 8px;
+  margin-top: 0;
+}
