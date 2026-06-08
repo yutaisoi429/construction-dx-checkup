@@ -794,14 +794,14 @@ select {
   align-items: center;
   display: grid;
   gap: 24px;
-  grid-template-columns: minmax(0, 1fr) minmax(160px, 180px);
+  grid-template-columns: minmax(0, 1fr) minmax(200px, 240px);
 }
 .consultation-merged .qr-placeholder {
   background: #fff;
   border: 0;
   border-radius: 22px;
   margin: 22px 0 0;
-  max-width: 180px;
+  max-width: 240px;
   padding: 14px;
 }
 .consultation-merged .line-qr-image {
@@ -831,7 +831,7 @@ select {
     grid-template-columns: 1fr;
   }
   .consultation-merged .qr-placeholder {
-    max-width: 220px;
+    max-width: 260px;
   }
 }
 @media (max-width: 720px) {
@@ -840,5 +840,46 @@ select {
   }
   .consultation-actions .button {
     width: 100%;
+  }
+}
+
+/* v8 consultation details */
+.consultation-details {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 24px;
+  margin: 28px auto 0;
+  max-width: 1060px;
+  padding: clamp(20px, 3vw, 28px);
+  text-align: left;
+}
+.consultation-details h3 {
+  color: #fff;
+  font-size: clamp(22px, 2vw, 28px);
+  margin-bottom: 10px;
+}
+.consultation-details p {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
+}
+.consultation-details ul {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+.consultation-details li {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  color: #fff;
+  font-weight: 900;
+  padding: 12px 14px;
+}
+@media (max-width: 900px) {
+  .consultation-details ul {
+    grid-template-columns: 1fr;
   }
 }
